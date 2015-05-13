@@ -52,11 +52,4 @@
         </pluginManagement>
     </build>
     
-    <dependencyManagement>
-    </dependencyManagement>
-    
-
-    <modules>
-        <module>verapdf-framework-core</module>
-    </modules>
 </project>
