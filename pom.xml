@@ -42,10 +42,12 @@
 
     <developers>
         <developer>
-            <email>carl@openpreservtion.org</email>
-            <name>Carl Wilson</name>
-            <url>https://github.com/carlwilson</url>
             <id>carlwilson</id>
+            <name>Carl Wilson</name>
+            <email>carl@openpreservation.org</email>
+            <url>https://github.com/carlwilson</url>
+            <organization>The Open Preservation Foundation</organization>
+            <organizationUrl>http://openpreservation.org</organizationUrl>
         </developer>
     </developers>
     
