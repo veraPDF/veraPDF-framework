@@ -4,7 +4,9 @@
         <artifactId>oss-parent</artifactId>
         <groupId>org.sonatype.oss</groupId>
         <version>7</version>
+        <relativePath />
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.verapdf</groupId>
     <artifactId>verapdf-framework-parent</artifactId>
