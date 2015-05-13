@@ -1,48 +1,58 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<artifactId>oss-parent</artifactId>
-		<groupId>org.sonatype.oss</groupId>
-		<version>7</version>
-	</parent>
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.verapdf</groupId>
-	<artifactId>verapdf-framework</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>verapdf-framework-parent</artifactId>
+        <groupId>org.verapdf</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>verapdf-framework</artifactId>
+    <packaging>pom</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<xtext-version>2.7.2</xtext-version>
-		<jdk.source.version>1.7</jdk.source.version>
-		<jdk.target.version>1.7</jdk.target.version>
-	</properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<scm>
-		<connection>scm:git:https://github.com/veraPDF/veraPDF-framework.git</connection>
-	</scm>
+    <scm>
+        <url>https://github.com/veraPDF/veraPDF-framework</url>
+        <connection>scm:git:git://github.com/veraPDF/veraPDF-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:veraPDF/veraPDF-framework.git</developerConnection>
+    </scm>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>${jdk.source.version}</source>
-					<target>${jdk.target.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <issueManagement>
+        <url>https://github.com/veraPDF/veraPDF-framework/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <email>carl@openpreservtion.org</email>
+            <name>Carl Wilson</name>
+            <url>https://github.com/carlwilson</url>
+            <id>carlwilson</id>
+        </developer>
+    </developers>
+    
+    <modules>
+        <module>parent</module>
+        <module>api</module>
+        <module>core</module>
+    </modules>
+
 </project>
